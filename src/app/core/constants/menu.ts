@@ -3,16 +3,23 @@ import { MenuItem } from '../models/menu.model';
 export class Menu {
   public static pages: MenuItem[] = [
     {
-      group: 'Base',
+      group: 'Panel Adminvo',
       separator: false,
       items: [
         {
-          icon: 'assets/icons/heroicons/outline/chart-pie.svg',
-          label: 'Dashboard',
-          route: '/dashboard',
+          icon: 'assets/icons/heroicons/outline/rectangle-stack.svg',
+          label: 'Catálogos',
+          route: '/beverages',
           children: [
-            { label: 'Nfts', route: '/dashboard/nfts' },
-            { label: 'Podcast', route: '/dashboard/podcast' },
+            { icon: 'assets/icons/heroicons/outline/beverage.svg', label: 'Bebidas', route: '/admin-panel/beverages' },
+            { label: 'Mantelería', route: '/admin-panel/table-linen' },
+            { label: 'Tipos de Evento', route: '/admin-panel/event-type' },
+            { label: 'Tipos de Plantilla', route: '/admin-panel/template-type' },
+            { label: 'Invitados', route: '/admin-panel/guest' },
+            { label: 'Anfitriones', route: '/admin-panel/host' },
+            { label: 'Eventos', route: '/admin-panel/event' },
+            { label: 'Sección de Plantilla', route: '/admin-panel/template-section' },
+            { label: 'Plantillas', route: '/admin-panel/template' },
           ],
         },
         {
@@ -29,27 +36,27 @@ export class Menu {
         },
       ],
     },
-    {
-      group: 'Collaboration',
-      separator: true,
-      items: [
-        {
-          icon: 'assets/icons/heroicons/outline/download.svg',
-          label: 'Download',
-          route: '/download',
-        },
-        {
-          icon: 'assets/icons/heroicons/outline/gift.svg',
-          label: 'Gift Card',
-          route: '/gift',
-        },
-        {
-          icon: 'assets/icons/heroicons/outline/users.svg',
-          label: 'Users',
-          route: '/users',
-        },
-      ],
-    },
+    // {
+    //   group: 'Collaboration',
+    //   separator: true,
+    //   items: [
+    //     {
+    //       icon: 'assets/icons/heroicons/outline/download.svg',
+    //       label: 'Download',
+    //       route: '/download',
+    //     },
+    //     {
+    //       icon: 'assets/icons/heroicons/outline/gift.svg',
+    //       label: 'Gift Card',
+    //       route: '/gift',
+    //     },
+    //     {
+    //       icon: 'assets/icons/heroicons/outline/users.svg',
+    //       label: 'Users',
+    //       route: '/users',
+    //     },
+    //   ],
+    // },
     {
       group: 'Config',
       separator: false,

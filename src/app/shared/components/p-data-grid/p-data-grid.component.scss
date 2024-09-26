@@ -1,0 +1,55 @@
+table {
+  width: 100%;
+}
+
+.content {
+  margin: 15px;
+  height: 90%;
+}
+
+.filter-content {
+  margin: 15px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: start; /* Center the form in the middle */
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
+  width: 60%; /* Limit the total width to 60% */
+  margin-top: 15px;
+}
+
+.input-container {
+  flex: 1; /* Let the input take up as much space as possible */
+  margin-top: 15px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center;
+  margin-left: 10px; /* Optional: Add some space between the input and the button */
+}
+
+.relative {
+  width: 100% !important;
+}
+
+.no-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust height based on your layout */
+  text-align: center;
+}
+
+.no-data-text {
+  font-size: 18px;
+  color: #999; /* You can adjust the color as needed */
+  font-style: italic;
+}

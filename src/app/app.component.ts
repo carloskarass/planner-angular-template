@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { ThemeService } from './core/services/theme.service';
-import { RouterOutlet } from '@angular/router';
 import { NgClass } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ThemeService } from './core/services/theme.service';
 import { ResponsiveHelperComponent } from './shared/components/responsive-helper/responsive-helper.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { ResponsiveHelperComponent } from './shared/components/responsive-helper
   imports: [NgClass, RouterOutlet, ResponsiveHelperComponent],
 })
 export class AppComponent {
-  title = 'Angular Tailwind';
+  title = 'Planner';
 
   constructor(public themeService: ThemeService) {}
 }

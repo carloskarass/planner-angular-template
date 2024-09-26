@@ -1,0 +1,28 @@
+.container-title {
+  margin-left: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center; /* Align items vertically in the center */
+  max-width: 30%; /* Limit the total width to 60% */
+  margin-top: 15px;
+
+  button {
+    margin-right: 20px;
+  }
+
+  h1 {
+    margin: unset !important;
+  }
+}
+
+.input-container {
+  flex: 1; /* Let the input take up as much space as possible */
+  margin-top: 15px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center;
+  margin-left: 10px; /* Optional: Add some space between the input and the button */
+}

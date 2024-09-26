@@ -1,6 +1,6 @@
 import { Injectable, OnDestroy, signal } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Menu } from 'src/app/core/constants/menu';
 import { MenuItem, SubMenuItem } from 'src/app/core/models/menu.model';
 
@@ -87,4 +87,10 @@ export class MenuService implements OnDestroy {
   ngOnDestroy(): void {
     this._subscription.unsubscribe();
   }
+
+  // getMenuList(): Observable<Menu[]> {
+  //   let menus: Observable<Menu[]>
+
+  //   return menus;
+  // }
 }

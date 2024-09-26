@@ -4,11 +4,16 @@ import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: 'welcome',
     component: LayoutComponent,
-    loadChildren: () => import('../dashboard/dashboard.module').then((m) => m.DashboardModule),
+    loadChildren: () => import('../welcome/welcome.module').then((m) => m.WelcomeModule),
   },
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  {
+    path: 'admin-panel',
+    component: LayoutComponent,
+    loadChildren: () => import('../admin-panel/admin-panel.module').then((m) => m.AdminPanelModule),
+  },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '**', redirectTo: 'error/404' },
 ];
 

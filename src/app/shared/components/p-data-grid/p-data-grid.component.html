@@ -1,0 +1,38 @@
+<div class="mat-elevation-z8 content">
+  <form class="flex-container filter-content">
+    <section class="form-container">
+      <div class="relative">
+        <input type="text" id="filter" class="full-width peer block" placeholder=" " [formControl]="filter" />
+        <label
+          for="filter"
+          class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+          Buscar
+        </label>
+      </div>
+
+      <div class="button-container">
+        <button
+          class="rounded-md border border-transparent bg-primary-500 py-1 px-2 text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+    </section>
+  </form>
+
+  <!-- <div class="no-data-container">
+    <p class="no-data-text">No data available. Please adjust your filter or check back later.</p>
+  </div> -->
+
+  <table mat-table [dataSource]="dataSource">
+    <ng-container [matColumnDef]="col.field" *ngFor="let col of columns">
+      <th mat-header-cell *matHeaderCellDef>{{ col.label }}</th>
+      <td mat-cell *matCellDef="let element">{{ element[col.field] }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="getHeaderColumns()"></tr>
+    <tr mat-row *matRowDef="let row; columns: getHeaderColumns()"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
